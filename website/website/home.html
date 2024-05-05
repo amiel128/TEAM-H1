@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are not empty
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please enter both username and password.");
+                return false;
+            }
+
+            // Check if username is "admin" and password is "password"
+            if (username === "Genshin" && password === "Genshin") {
+                // Redirect to index.html upon successful login
+                window.location.href = "index.html";
+                return false; // Prevent form submission
+            } else {
+                alert("Invalid username or password.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body class="first-page"> <!-- Add this line -->
+    <header>
+        <h1>Welcome to My Picture Gallery Website</h1>
+    </header>
+    <div class="welcome-container">
+        <p>Please enter the username and the password to log in.</p>
+        <form onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

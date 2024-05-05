@@ -1,0 +1,93 @@
+:root {
+  --header-height: 3.5rem;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("bg2.png");
+}
+
+/* Existing CSS styles */
+
+header {
+    background-color: #3A547C;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item {
+    border: 2px solid #ddd; /* Add border to each picture */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%; /* Make pictures fill the container */
+    height: auto;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+
+.welcome-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS specific to first_page.html */
+
+body.first-page {
+    background-image: url('bg.jpg');
+    
+}
+
+.welcome-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 50px;
+    border-radius: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    display: block;
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+}
